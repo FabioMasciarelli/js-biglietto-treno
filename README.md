@@ -1,10 +1,12 @@
 ***INPUT***
 
 1. chiedere al passeggero quanti km vuole percorrere
+    -trasformare la stringa in numero
 
 2. chiedere al passeggero quanti anni ha
+    -trasformare la stringa in numero
 
-***CONDIZIONI***
+***LOGICA***
 
 1. impostare la variabile costante del prezzo in base ai Km.
 
