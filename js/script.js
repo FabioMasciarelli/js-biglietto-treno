@@ -15,27 +15,27 @@ console.log(userKm, typeof userKm);
 
 //LOGICA
 const variableKm = 0.21; // number
-const youngDiscount = 0.2; // number
-const oldDiscount = 0.4; // number
-let finalPrice ="";
+const youngDiscount = 20; // number
+const oldDiscount = 40; // number
+let discount ="";
 
 // calcolo del prezzo del biglietto in base all'età e al numero di Km che vuole fare il cliente
 if (userAge < 18 && userAge > 0) {
-    finalPrice = (variableKm * userKm) - 0.2; 
+    discount = (variableKm * userKm) * (youngDiscount / 100); 
 } else if (userAge > 65) {
-    finalPrice = (variableKm * userKm) - 0.4; 
+    discount = (variableKm * userKm) * (oldDiscount / 100); 
 } else {
-    finalPrice = (variableKm * userKm);
+    discount = (variableKm * userKm);
 }
-console.log(finalPrice, typeof finalPrice);
+console.log(discount, typeof discount);
 
+const finalPrice = (variableKm * userKm) - discount;
+
+// OUTPUT 
 //trasformare il numero con soli due valori dopo la virgola
 const number = finalPrice.toFixed(2);
 
 finalMessage = `Abbiamo calcolato il prezzo del tuo biglietto ed è di: ${number} €`; // string
-
-
-// OUTPUT 
 document .getElementById("result") .innerHTML = finalMessage;
 
 
